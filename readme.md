@@ -1,16 +1,15 @@
-markdown
-# FT232_XILINX_JTAG
+# FT2232_XILINX_JTAG
 
 ## 介绍
 
-FT232_XILINX_JTAG 是一个用于通过 FTDI 设备与 Digilent USB 设备进行通信并读写 EEPROM 信息的 Windows Forms 应用程序该程序主要用于设置和管理 Digilent USB 设备的序列号信息
+FT2232_XILINX_JTAG 是一个用于设置和管理 基于 FT2232 的 Xilinx JTAG 设备的序列号信息 Windows Forms 应用程序该程序
 
 ## 技术栈
 
-- **编程语言**：C#
-- **开发工具**：Visual Studio / Visual Studio Code
-- **框架/库**：.NET Framework / .NET Core
-- **依赖库**：FTD2XX_NET
+- **编程语言**: C#
+- **开发工具**: Visual Studio / Visual Studio Code
+- **框架/库**: .NET Framework / .NET Core
+- **依赖库**: FTD2XX_NET
 
 ## 安装
 
@@ -20,7 +19,7 @@ FT232_XILINX_JTAG 是一个用于通过 FTDI 设备与 Digilent USB 设备进行
 
 ## 贡献指南
 
-如果您想为本项目做出贡献，请遵循以下步骤：
+如果您想为本项目做出贡献，请遵循以下步骤:
 
 1. Fork项目
 2. 创建一个新的分支进行开发
@@ -33,6 +32,6 @@ FT232_XILINX_JTAG 是一个用于通过 FTDI 设备与 Digilent USB 设备进行
 
 ## 联系方式
 
-如有任何问题或建议，请联系作者：
+如有任何问题或建议，请联系作者:
 
-- GitHub：[https://github.com/John-Tito](https://github.com/John-Tito)
+- GitHub: [https://github.com/John-Tito](https://github.com/John-Tito)
