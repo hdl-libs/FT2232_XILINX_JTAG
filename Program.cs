@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FT232_XILINX_JTAG());
+            Application.Run(new PROGRAM_FTDI());
         }
     }
 }

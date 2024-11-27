@@ -1,37 +1,32 @@
-# FT2232_XILINX_JTAG
+# PROGRAM_FTDI
 
 ## 介绍
 
-FT2232_XILINX_JTAG 是一个用于设置和管理 基于 FT2232 的 Xilinx JTAG 设备的序列号信息 Windows Forms 应用程序该程序
+PROGRAM_FTDI 是一个用于设置和管理 基于 FT232/FT2232/FT4232 的 Xilinx JTAG 设备的序列号信息 Windows Forms 应用程序
 
-## 技术栈
+## 预览
 
-- **编程语言**: C#
-- **开发工具**: Visual Studio / Visual Studio Code
-- **框架/库**: .NET Framework / .NET Core
+![xilinx_jtag](doc/xilinx_jtag.png)
+
+## 使用环境
+
+- **开发工具**: Visual Studio 2022
+- **框架/库**: .NET Framework v4.8
 - **依赖库**: FTD2XX_NET
 
-## 安装
+## 重点说明
 
-1. 确保已安装 .NET Framework 或 .NET Core
-2. 使用 Visual Studio 或 Visual Studio Code 打开项目
-3. 安装必要的驱动程序
+1. 能否被 Xilinx 工具识别为 JTAG 设备的关键点在于用户区域的 FirmwareId 字段, 该字段根据芯片型号确定
+2. 用户字段中还存储了 Vendor 字符串和 Board 字符串
+3. 只需要擦除后, 使用 FTDI 的写 EEPROM API 正常写入EEPROM, 随后再使用写 UserArea API 写入 "FirmwareId + Vendor + Board" 即可
+4. 如果芯片有多个端口, Xilinx 工具仅使用端口 A 作为 JTAG, 即使修改端口是否使用VCP也没有用
 
-## 贡献指南
+## 参考资料
 
-如果您想为本项目做出贡献，请遵循以下步骤:
+1. [Xilinx JTAG Support on FTDI](https://etherealwake.com/2024/06/xilinx-ftdi-jtag/)
 
-1. Fork项目
-2. 创建一个新的分支进行开发
-3. 提交更改并推送至您的叉克仓库
-4. 提交 Pull Request
+    这篇文章描述了 eeprom 数据结构
 
-## 许可证
+2. [ug908-vivado-programming-debugging](https://docs.amd.com/r/en-US/ug908-vivado-programming-debugging/Programming-FTDI-Devices-for-Vivado-Hardware-Manager-Support)
 
-本项目采用 MIT 许可证
-
-## 联系方式
-
-如有任何问题或建议，请联系作者:
-
-- GitHub: [https://github.com/John-Tito](https://github.com/John-Tito)
+    这篇文档描述了如何将 FTDI 设备编程为 JTAG 设备

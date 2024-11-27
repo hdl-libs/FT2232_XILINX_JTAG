@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT232_XILINX_JTAG", "FT232_XILINX_JTAG.csproj", "{81A913D2-8874-4A5E-97CA-1DBDC478806B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROGRAM_FTDI", "PROGRAM_FTDI.csproj", "{81A913D2-8874-4A5E-97CA-1DBDC478806B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,7 +11,7 @@ jobs:
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      Solution_Name: FT232_XILINX_JTAG.sln  # 替换为你的解决方案名
+      Solution_Name: PROGRAM_FTDI.sln  # 替换为你的解决方案名
       Configuration: Release                   # 设置为 Release 或 Debug
 
     steps:
@@ -34,7 +34,7 @@ jobs:
     - name: Create ZIP file
       run: |
         $zipPath = "ReleasePackage.zip"
-        Compress-Archive -Path "bin/Release/FT232_XILINX_JTAG.exe", "bin/Release/Eep.bin", "bin/Release/FTD2XX_NET.dll" -DestinationPath $zipPath
+        Compress-Archive -Path "bin/Release/PROGRAM_FTDI.exe", "bin/Release/FTD2XX_NET.dll" -DestinationPath $zipPath
 
     # 创建 GitHub Releases
     - name: Create Release
@@ -52,5 +52,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ReleasePackage.zip                          # ZIP 文件路径
-        asset_name: FT232_XILINX_JTAG-${{ github.ref_name }}.zip    # 使用版本号命名
+        asset_name: PROGRAM_FTDI-${{ github.ref_name }}.zip    # 使用版本号命名
         asset_content_type: application/zip
